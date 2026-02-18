@@ -1,0 +1,21 @@
+[package]
+name = "pdf-size-shrinker"
+version = "0.1.0"
+edition = "2024"
+description = "A CLI tool to shrink PDF file sizes using Ghostscript"
+
+[[bin]]
+name = "pdfshrinker"
+path = "src/main.rs"
+
+[lib]
+name = "pdf_size_shrinker"
+path = "src/lib.rs"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4", features = ["derive"] }
+colored = "2"
+human_bytes = "0.4"
+thiserror = "2"
+walkdir = "2"
